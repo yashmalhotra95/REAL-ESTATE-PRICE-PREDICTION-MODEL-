@@ -29,3 +29,21 @@ Stage 1: Exploratory Data Analysis (EDA)
 <br>**'lot_size'** - Total outside area in squared feet
 <br>**'year_built'** - Year property was built
 <br>**'basement'** - Does the property have a basement?
+#### Location convenience scores
+**'restaurants'** - Number of restaurants within 1 mile
+<br>**'groceries'** - Number of grocery stores within 1 mile
+<br>**'nightlife'** - Number of nightlife venues within 1 mile
+<br>**'cafes'** - Number of cafes within 1 mile
+<br>**'shopping'** - Number of stores within 1 mile
+<br>**'arts_entertainment'** - Number of arts and entertainment venues within 1 mile
+<br>**'beauty_spas'** - Number of beauty and spa locations within 1 mile
+<br>**'active_life'** - Number of gyms, yoga studios, and sports venues within 1 mile
+
+#### Neighborhood demographics
+**'median_age'** - Median age of the neighborhood
+<br>**'married'** - Percent of neighborhood who are married
+<br>**'college_grad'** - Percent of neighborhood who graduated college
+
+#### Schools
+**'num_schools'** - Number of public schools within district
+<br>**'median_school'** - Median score of the public schools within district, on the range 1 - 10
