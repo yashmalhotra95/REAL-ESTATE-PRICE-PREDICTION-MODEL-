@@ -27,3 +27,39 @@ ax2.set_ylabel("No. of Transactions")
 ax.legend(['Housing Prices/Sqft'],loc=1)
 ax2.legend(['No. of Transactions'],loc=2)
 <matplotlib.legend.Legend at 0x7b2e0bc0bdf0>
+
+# From the plot below, the size of houses in transaction are decreasing significantly from around 3,500 sqft in 1993 to 1,600 sqft in 2016.
+plt.plot(df.sqft.groupby(by=df.tx_year).mean().index,df.sqft.groupby(by=df.tx_year).mean().values,'g')
+plt.title('Size of houses')
+plt.ylabel('Sq. Ft')
+plt.xlabel('Year')
+
+# Ensure `grouped_mean` only contains numeric columns
+df_numeric = df.select_dtypes(include=[np.number])
+grouped_mean = df_numeric.groupby(by='tx_year').mean()
+
+# Assign to `byyear`
+byyear = grouped_mean
+
+# Extract the index (x), column names (n), and column values (v)
+x = byyear.index
+n = list(byyear.columns)
+v = [byyear[col].values for col in byyear.columns]
+
+# Check the output
+print("Index (x):", x)
+print("Column Names (n):", n)
+print("Column Values (v):", v)
+
+w = 8
+h = 3
+fig, ax = plt.subplots(h,w,figsize=(20,5))
+plt.tight_layout()
+
+for i in range(w):
+    ax[0,i].plot(x,v[i])
+    ax[1,i].plot(x,v[i+8])
+    ax[2,i].plot(x,v[i+16])
+    ax[0,i].set_title(n[i])
+    ax[1,i].set_title(n[i+8])
+    ax[2,i].set_title(n[i+16])
