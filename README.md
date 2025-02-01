@@ -7,3 +7,8 @@ The model utilizes advanced regression techniques, such as Linear Regression, Fe
 <br>__Target variable:__ Transaction Price
 <br>__Win condition:__ Avg. prediction error  __*< $70,000*__ , using Mean Absolute Error (MAE)
 <br>__Timeline:__ 1 months
+### Stages
+Stage 1: Exploratory Data Analysis (EDA)
+<br>Stage 2: Data Cleaning
+<br>Stage 3: Feature Engineering
+<br>Stage 4: Modeling and Evaluation
