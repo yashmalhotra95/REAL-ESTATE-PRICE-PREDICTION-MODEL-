@@ -12,10 +12,20 @@ Stage 1: Exploratory Data Analysis (EDA)
 <br>Stage 2: Data Cleaning
 <br>Stage 3: Feature Engineering
 <br>Stage 4: Modeling and Evaluation
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.model_selection import train_test_split
-from mpl_toolkits.mplot3d import Axes3D
-%matplotlib inline
+
+### Features/Columns Explanation:
+#### Target variable:
+**'tx_price'** - Transaction price in USD
+
+#### Property Public records:
+**'tx_year'** - Year the transaction took place
+<br>**'property_tax'** - Monthly property tax
+<br>**'insurance'** - Cost of monthly home owner's insurance
+
+#### Property characteristics:
+**'beds'** - Number of bedrooms
+<br>**'baths'** - Number of bathrooms
+<br>**'sqft'** - Total floor area in squared feet
+<br>**'lot_size'** - Total outside area in squared feet
+<br>**'year_built'** - Year property was built
+<br>**'basement'** - Does the property have a basement?
