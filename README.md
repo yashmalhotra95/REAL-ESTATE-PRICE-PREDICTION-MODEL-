@@ -47,3 +47,6 @@ Stage 1: Exploratory Data Analysis (EDA)
 #### Schools
 **'num_schools'** - Number of public schools within district
 <br>**'median_school'** - Median score of the public schools within district, on the range 1 - 10
+
+## Summary
+From section 4.2, the gradient boosting regressor model could predict the transaction price with an mean absolute error of $45k. After trying out training with different combination of features, the model predicts most accurately with only 7 features: sqft, lot size, property tax , insurance, beds, baths and tx year.
