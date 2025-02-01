@@ -12,3 +12,10 @@ Stage 1: Exploratory Data Analysis (EDA)
 <br>Stage 2: Data Cleaning
 <br>Stage 3: Feature Engineering
 <br>Stage 4: Modeling and Evaluation
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from mpl_toolkits.mplot3d import Axes3D
+%matplotlib inline
