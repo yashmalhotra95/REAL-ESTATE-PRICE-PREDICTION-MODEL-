@@ -49,6 +49,30 @@ ax.scatter(locx, locy, mae_gbr)
 <mpl_toolkits.mplot3d.art3d.Path3DCollection at 0x7b2e047a9720>
 
 from sklearn.metrics import mean_absolute_error
+class GradientBoostingRegressor(
+    *,
+    loss: Literal['squared_error', 'absolute_error', 'huber', 'quantile'] = "squared_error",
+    learning_rate: Float = 0.1,
+    n_estimators: Int = 100,
+    subsample: Float = 1,
+    criterion: Literal['friedman_mse', 'squared_error'] = "friedman_mse",
+    min_samples_split: float | int = 2,
+    min_samples_leaf: float | int = 1,
+    min_weight_fraction_leaf: Float = 0,
+    max_depth: int | None = 3,
+    min_impurity_decrease: Float = 0,
+    init: str | BaseEstimator | None = None,
+    random_state: Int | None = None,
+    max_features: float | int | Literal['auto', 'sqrt', 'log2'] | None = None,
+    alpha: Float = 0.9,
+    verbose: Int = 0,
+    max_leaf_nodes: Int | None = None,
+    warm_start: bool = False,
+    validation_fraction: Float = 0.1,
+    n_iter_no_change: Int | None = None,
+    tol: Float = 0.0001,
+    ccp_alpha: float = 0
+)
 
 gbr_model = GradientBoostingRegressor(learning_rate=0.1, max_depth=5).fit(X_train, y_train)
 y_pred = gbr_model.predict(X_test)
