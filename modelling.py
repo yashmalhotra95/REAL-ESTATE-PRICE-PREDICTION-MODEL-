@@ -98,3 +98,6 @@ y_pred = gbr_model.predict(X_test)
 gbr_mae_scores = mean_absolute_error(y_test, y_pred)
 print(gbr_mae_scores)
 # 45210.36523987265
+
+import pickle
+pickle.dump(model, open('REIT_gbr_model.sav', 'wb'))
